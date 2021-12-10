@@ -1,3 +1,4 @@
+/*
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 const prefix = '!';
@@ -16,3 +17,17 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(process.env.TOKEN)
+*/
+
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in...`);
+});
+
+client.on('message', msg => {
+  msg.reply('pong');
+});
+
+client.login(process.env.TOKEN);
