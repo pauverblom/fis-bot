@@ -6,15 +6,24 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+
+  if (message.author.id === client.user.id) return; //ignorar mensajes propios
+
   if (message.content.toLowerCase() == '!si')
   {
-     message.reply('si\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\n');
+     message.reply('\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\n');
   }
 
- if (message.content.toLowerCase().endsWith('que'))
-{
-message.reply('mec');
-}
+  if (message.content.toLowerCase().endsWith('que'))
+  {
+    message.edit(message.content + "so");
+  }
+
+  if (message.content.toLowerCase() == ":yes:")
+  {
+    message.reply(":yes:")
+  }
 });
+
 
 client.login(process.env.TOKEN);
