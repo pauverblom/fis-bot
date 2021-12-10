@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  if (message.content.toLowercase() == '!si')
+  if (message.content.toLowerCase() == '!si')
   {
      message.reply('si\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\n');
   }
