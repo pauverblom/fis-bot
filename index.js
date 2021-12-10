@@ -10,7 +10,10 @@ client.on("ready", () => {
 client.on("message", message => {
   if (message.content === "!si") 
   {
-    message.reply("si");
+    for (let i = 0; i < 10; i++)
+    {
+      message.reply("si");
+    }
   }
 })
 
