@@ -11,7 +11,7 @@ client.on('message', message => {
      message.reply('si\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\nsi\n');
   }
 
- if (message.content.endsWith() == ' que')
+ if (message.content.toLowerCase().endsWith('que'))
 {
 message.reply('mec');
 }
