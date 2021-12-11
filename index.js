@@ -97,7 +97,7 @@ client.on('message', message => {
  }
 if (message.content.toLowerCase() === '!apruébame')
 {
-message.reply("Sabés lo que son las notas negativas boludo? Pues así se quedará tu examen, si?");
+message.reply("Sabés lo que son los números negativos boludo? Pues así se quedará tu examen, si?");
 }
 });
 
