@@ -94,7 +94,12 @@ client.on('message', message => {
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos hasta sino di ecsssss 🇧🇷`);
-  }
+ 
+if (message.content.toLowerCase() === '!apruébame')
+{
+message.reply("Sabés lo que son las notas negativas boludo? Pues así se quedará tu examen, si?");
+}
+ }
 });
 
 
