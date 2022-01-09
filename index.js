@@ -99,6 +99,10 @@ if (message.content.toLowerCase() === '!apruébame')
 {
 message.reply("Sabés lo que son los números negativos boludo? Pues así se quedará tu examen, si?");
 }
+ if (message.content.toLowerCase() === '!jijijija')
+{ 
+  message.channel.send('https://www.youtube.com/watch?v=d6s3iMsfPDo');
+}
 });
 
 
