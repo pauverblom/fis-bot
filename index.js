@@ -37,7 +37,7 @@ client.on('message', message => {
     var minutos = (horas - Math.floor(horas)) * 60;
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos hasta tu cita con Modesto 😳`);
+    message.reply(`ya ha sido el examen de química. Buena suerte 🥵 `);
   }
   if (message.content.toLowerCase() === "!examen física")
   {
