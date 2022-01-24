@@ -27,32 +27,14 @@ client.on('message', message => {
 
   if (message.content.toLowerCase() === "!examen química")
   {
-    var hoy = new Date();
-    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
-    var dia_examenes = new Date("01/13/2022");
-    var tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`ya ha sido el examen de química. Buena suerte 🥵 `);
+    message.reply(`ya tenemos las notas 😳 `);
   }
-  if (message.content.toLowerCase() === "!examen física")
+
+if (message.content.toLowerCase() === "!examen física")
   {
-    var hoy = new Date();
-    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
-    var dia_examenes = new Date("01/20/2022");
-    var tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos hasta que Chantal y yo te destrocemos el culo 😎`);
+    message.reply(`El examen ya ha sido. Disfruta de tu doble polea 👀`);
   }
+  
   if (message.content.toLowerCase() === "!examen álgebra")
   {
     var hoy = new Date();
@@ -69,31 +51,11 @@ client.on('message', message => {
   }
   if (message.content.toLowerCase() === "!examen informática")
   {
-    var hoy = new Date();
-    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
-    var dia_examenes = new Date("01/17/2022");
-    var tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos hasta que Ariadna te haga un bonito examen con ficheros 🥵`);
+    message.reply(`bonito programa final del examen 🥵`);
   }
   if (message.content.toLowerCase() === "!examen cálculo")
   {
-    var hoy = new Date();
-    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
-    var dia_examenes = new Date("01/24/2022");
-    var tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos hasta sino di ecsssss 🇧🇷`);
+    message.reply(`menudo porro el del chepas 🥸`);
  }
 if (message.content.toLowerCase() === '!apruébame')
 {
