@@ -57,7 +57,7 @@ if (message.content.toLowerCase() === "!examen física")
  }
 if (message.content.toLowerCase() === '!apruébame')
 {
-message.reply("Sabés lo que son los números negativos boludo? Pues así se quedará tu examen, si?");
+message.reply("Sabés lo que son los números negativos boludo? Pues así se quedará tu examen, si??");
 }
  if (message.content.toLowerCase() === '!jijijija')
 { 
