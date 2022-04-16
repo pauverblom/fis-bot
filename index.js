@@ -36,18 +36,16 @@ if (message.content.toLowerCase() === "!examen física")
   }
   
   if (message.content.toLowerCase() === "!examen álgebra")
-  {
-    var hoy = new Date();
-    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
-    var dia_examenes = new Date("01/28/2022");
-    var tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
-
+  { 
+    let dia_examenes = new Date("06/09/2022");
+    let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
+    
     var dias = tiempo_hasta_examenes / 86400000;
     var horas = (dias - Math.floor(dias)) * 24;
     var minutos = (horas - Math.floor(horas)) * 60;
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos hasta que Susana deje de caerte bien 😔`);
+    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para el examen. Qué coño es un tensor?`);
   }
   if (message.content.toLowerCase() === "!examen informática")
   {
@@ -67,5 +65,13 @@ message.reply("Sabés lo que son los números negativos boludo? Pues así se que
 }
 });
 
-
 client.login(process.env.TOKEN);
+
+function TiempoHasta(dia_examenes) {
+    var hoy = new Date();
+    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
+    let tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
+    return tiempo_hasta_examenes;
+}
+
+
