@@ -28,7 +28,7 @@ client.on('message', message => {
   }
   if (message.content.toLowerCase() === "!examen mecánica" || message.content.toLowerCase() === "!examen mecanica")
   {
-    let dia_examenes = new Date("01/11/2022");
+    let dia_examenes = new Date("01/11/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -40,7 +40,7 @@ client.on('message', message => {
   }
   if (message.content.toLowerCase() === "!examen men")
   {
-    let dia_examenes = new Date("01/20/2022");
+    let dia_examenes = new Date("01/20/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -52,7 +52,7 @@ client.on('message', message => {
   }
   if (message.content.toLowerCase() === "!examen métodos" || message.content.toLowerCase() === "!examen metodos" || message.content.toLowerCase() === "!examen metodos matematicos" || message.content.toLowerCase() === "!examen métodos matemáticos")
   {
-    let dia_examenes = new Date("01/26/2022");
+    let dia_examenes = new Date("01/26/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
