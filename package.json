@@ -16,4 +16,5 @@
     "express": "^4.17.1",
     "package": "^1.0.1",
     "remove-accents": "^0.4.4"
+  }
 }
