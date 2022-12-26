@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var accents = require('remove-accents');
 require("dotenv").config();
 
 client.on('ready', () => {
@@ -26,7 +27,7 @@ client.on('message', message => {
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que 🍎 haga de las suyas`);
   }
-  if (message.content.toLowerCase() === "!examen mecánica" || message.content.toLowerCase() === "!examen mecanica")
+  if (remove.accents(message.content.toLowerCase()) === "!examen mecanica" || message.content.toLowerCase() === "!examen mec")
   {
     let dia_examenes = new Date("01/11/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
