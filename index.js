@@ -8,7 +8,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-
+  
+  let mensaje == accents.remove(message.content.toLowerCase());
+    
   if (message.author.id === client.user.id) return; //ignorar mensajes propios
 
   if (message.content.toLowerCase().endsWith('que'))
@@ -27,7 +29,7 @@ client.on('message', message => {
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que 🍎 haga de las suyas`);
   }
-  if (accents.remove(message.content.toLowerCase()) === "!examen mecanica" || accents.remove(message.content.toLowerCase()) === "!examen mec")
+  if (mensaje === "!examen mecanica" || mensaje === "!examen mec")
   {
     let dia_examenes = new Date("01/11/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
