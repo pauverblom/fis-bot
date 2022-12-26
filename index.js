@@ -41,7 +41,7 @@ client.on('message', message => {
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que PacoBell nos abra en canal`);
   }
-  if (message.content.toLowerCase() === "!examen men")
+  if (mensaje === "!examen men" || mensaje === "!examen metodos estadisticos" || mensaje === "examen metodos estadisticos y numericos")
   {
     let dia_examenes = new Date("01/20/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
@@ -53,7 +53,7 @@ client.on('message', message => {
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que felicísimo nos deje tristísimos`);
   }
-  if (message.content.toLowerCase() === "!examen métodos" || message.content.toLowerCase() === "!examen metodos" || message.content.toLowerCase() === "!examen metodos matematicos" || message.content.toLowerCase() === "!examen métodos matemáticos")
+  if (mensaje === "!examen metodos" || mensaje === "!examen metodos matematicos")
   {
     let dia_examenes = new Date("01/26/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
