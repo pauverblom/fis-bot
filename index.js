@@ -17,9 +17,9 @@ client.on('message', message => {
   {
     message.channel.send("so");
   }
-  if (message.content.toLowerCase() === "!examen termo")
+  if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera")
   {
-    let dia_examenes = new Date("01/16/2023");
+    let dia_examenes = new Date("05/26/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -27,11 +27,11 @@ client.on('message', message => {
     var minutos = (horas - Math.floor(horas)) * 60;
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que 🍎 haga de las suyas`);
+    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que la meteomami nos destroce 🥵⛈️`);
   }
-  if (mensaje === "!examen mecanica" || mensaje === "!examen mec")
+  if (mensaje === "!examen mecanica" || mensaje === "!examen mec" || mensaje === "!examen mecanica ii" || mensaje === "!examen mec ii" || mensaje === "!examen mecanica 2" || mensaje === "!examen mec 2" )
   {
-    let dia_examenes = new Date("01/11/2023");
+    let dia_examenes = new Date("06/08/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -39,11 +39,11 @@ client.on('message', message => {
     var minutos = (horas - Math.floor(horas)) * 60;
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que PacoBell nos abra en canal`);
+    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para Jacob nos meta un hostión a v = c`);
   }
-  if (mensaje === "!examen men" || mensaje === "!examen metodos estadisticos" || mensaje === "examen metodos estadisticos y numericos")
+  if (mensaje === "!examen oyo" || mensaje === "!examen ondas" || mensaje === "examen oscilaciones" || mensaje === "!examen oscilaciones y ondas" || mensaje === "!examen owo")
   {
-    let dia_examenes = new Date("01/20/2023");
+    let dia_examenes = new Date("06/05/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -51,11 +51,11 @@ client.on('message', message => {
     var minutos = (horas - Math.floor(horas)) * 60;
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que felicísimo nos deje tristísimos`);
+    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Llago nos meta el tensor de deformaciones a presión por el recto anal.`);
   }
-  if (mensaje === "!examen metodos" || mensaje === "!examen metodos matematicos")
+  if (mensaje === "!examen metodos" || mensaje === "!examen metodos matematicos" || mensaje === "!examen met" || mensaje === "!examen met mat" || mensaje === "!examen metodos ii" || mensaje === "!examen metodos matematicos ii" || mensaje === "!examen met ii" || mensaje === "!examen met mat ii" || mensaje === "!examen metodos 2" || mensaje === "!examen metodos matematicos 2" || mensaje === "!examen met 2" || mensaje === "!examen met mat 2")
   {
-    let dia_examenes = new Date("01/26/2023");
+    let dia_examenes = new Date("06/01/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -63,7 +63,7 @@ client.on('message', message => {
     var minutos = (horas - Math.floor(horas)) * 60;
     var segundos = (minutos - Math.floor(minutos)) * 60;
 
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos paraa que 🐮 acabe con nosotros`);
+    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Martín Martín nos vuele el culo.`);
   }
  
 });
