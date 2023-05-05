@@ -17,7 +17,7 @@ client.on('message', message => {
   {
     message.channel.send("so");
   }
-  if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera" || mensaje = "!examen fis atm")
+  if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera" || mensaje === "!examen fis atm")
   {
     let dia_examenes = new Date("05/26/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
