@@ -19,7 +19,7 @@ client.on('message', message => {
   }
   if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera" || mensaje === "!examen fis atm")
   {
-    let dia_examenes = new Date("05/26/2023");
+    let dia_examenes = new Date("2023-05-26T09:00:00.000+02:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -31,7 +31,7 @@ client.on('message', message => {
   }
   if (mensaje === "!examen mecanica" || mensaje === "!examen mec" || mensaje === "!examen mecanica ii" || mensaje === "!examen mec ii" || mensaje === "!examen mecanica 2" || mensaje === "!examen mec 2" )
   {
-    let dia_examenes = new Date("06/08/2023");
+    let dia_examenes = new Date("2023-06-08T09:00:00.000+02:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -43,7 +43,7 @@ client.on('message', message => {
   }
   if (mensaje === "!examen oyo" || mensaje === "!examen ondas" || mensaje === "examen oscilaciones" || mensaje === "!examen oscilaciones y ondas" || mensaje === "!examen owo")
   {
-    let dia_examenes = new Date("06/05/2023");
+    let dia_examenes = new Date("2023-06-05T15:00:00.000+02:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -55,7 +55,7 @@ client.on('message', message => {
   }
   if (mensaje === "!examen metodos" || mensaje === "!examen metodos matematicos" || mensaje === "!examen met" || mensaje === "!examen met mat" || mensaje === "!examen metodos ii" || mensaje === "!examen metodos matematicos ii" || mensaje === "!examen met ii" || mensaje === "!examen met mat ii" || mensaje === "!examen metodos 2" || mensaje === "!examen metodos matematicos 2" || mensaje === "!examen met 2" || mensaje === "!examen met mat 2")
   {
-    let dia_examenes = new Date("06/01/2023");
+    let dia_examenes = new Date("2023-06-01T09:00:00.000+02:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
@@ -67,7 +67,7 @@ client.on('message', message => {
   }
   if (mensaje === "testeando")
   {
-    let dia_examenes = new Date("2023-05-05T17:20:00.000+01:00");
+    let dia_examenes = new Date("2023-05-05T17:20:00.000+02:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
