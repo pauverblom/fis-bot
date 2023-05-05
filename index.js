@@ -65,7 +65,8 @@ client.on('message', message => {
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Martín Martín nos vuele el culo.`);
   }
-    if (mensaje === "testeando")
+  if (mensaje === "testeando")
+  {
     let dia_examenes = new Date("05/04/2023:17:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
