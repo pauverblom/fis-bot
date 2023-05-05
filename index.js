@@ -67,7 +67,7 @@ client.on('message', message => {
   }
   if (mensaje === "testeando")
   {
-    let dia_examenes = new Date("1995-12-17T03:24:00");
+    let dia_examenes = new Date("2023-05-5T17:20:00");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
 
     var dias = tiempo_hasta_examenes / 86400000;
