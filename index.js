@@ -17,7 +17,7 @@ client.on('message', message => {
   {
     message.channel.send("so");
   }
-  if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera")
+  if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera" || mensaje = "!examen fis atm")
   {
     let dia_examenes = new Date("05/26/2023");
     let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
@@ -65,6 +65,17 @@ client.on('message', message => {
 
     message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Martín Martín nos vuele el culo.`);
   }
+    if (mensaje === "testeando")
+    let dia_examenes = new Date("05/04/2023:17:00");
+    let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
+
+    var dias = tiempo_hasta_examenes / 86400000;
+    var horas = (dias - Math.floor(dias)) * 24;
+    var minutos = (horas - Math.floor(horas)) * 60;
+    var segundos = (minutos - Math.floor(minutos)) * 60;
+
+    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Martín Martín nos vuele el culo.`);
+  }
  
 });
 
@@ -72,7 +83,6 @@ client.login(process.env.TOKEN);
 
 function TiempoHasta(dia_examenes) {
     var hoy = new Date();
-    var fecha = hoy.getFullYear()+'-'+(hoy.getMonth()+1)+'-'+hoy.getDate();
     let tiempo_hasta_examenes = (dia_examenes.getTime() - hoy.getTime());
     return tiempo_hasta_examenes;
 }
