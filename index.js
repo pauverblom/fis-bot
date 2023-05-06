@@ -88,11 +88,10 @@ client.on('message', message => {
       segundos[i] = (minutos[i] - Math.floor(minutos[i])) * 60;
     }
     
-    message.reply(`
-    quedan ${Math.floor(dias[0])} D, ${Math.floor(horas[0])} h, ${Math.floor(minutos[0])} min y ${Math.floor(segundos[0])} s -> Física de la Atmósfera. \n 
-    quedan ${Math.floor(dias[1])} D, ${Math.floor(horas[1])} h, ${Math.floor(minutos[1])} min y ${Math.floor(segundos[1])} s -> Métodos Matemáticos II \n
-    quedan ${Math.floor(dias[2])} D, ${Math.floor(horas[2])} h, ${Math.floor(minutos[2])} min y ${Math.floor(segundos[2])} s -> Oscilaciones y Ondas \n
-    quedan ${Math.floor(dias[3])} D, ${Math.floor(horas[3])} h, ${Math.floor(minutos[3])} min y ${Math.floor(segundos[3])} s -> Mecánica II
+    message.reply(`${Math.floor(dias[0])} D, ${Math.floor(horas[0])} h, ${Math.floor(minutos[0])} min y ${Math.floor(segundos[0])} s -> Física de la Atmósfera. \n 
+    ${Math.floor(dias[1])} D, ${Math.floor(horas[1])} h, ${Math.floor(minutos[1])} min y ${Math.floor(segundos[1])} s -> Métodos Matemáticos II \n
+    ${Math.floor(dias[2])} D, ${Math.floor(horas[2])} h, ${Math.floor(minutos[2])} min y ${Math.floor(segundos[2])} s -> Oscilaciones y Ondas \n
+    ${Math.floor(dias[3])} D, ${Math.floor(horas[3])} h, ${Math.floor(minutos[3])} min y ${Math.floor(segundos[3])} s -> Mecánica II
     `);
   } //Podría hacer todo esto con un struct y sería más fácil pero soy masoca
 });
