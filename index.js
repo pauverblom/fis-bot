@@ -67,8 +67,10 @@ client.on('message', message => {
   }
   if (mensaje === "!todo")
   {
+    let tiempo_hasta_examenes = [];
     let dias_examenes = [];
     let dias = [];
+    let horas = [];
     let minutos = [];
     let segundos = [];
     
@@ -77,7 +79,6 @@ client.on('message', message => {
     dias_examenes[2] = new Date("2023-06-05T15:00:00.000+02:00");
     dias_examenes[3] = new Date("2023-06-08T09:00:00.000+02:00");
     
-    let tiempo_hasta_examenes = [];
     for (let i = 0; i < 4 ; i++)
     { 
       tiempo_hasta_examenes[i] = TiempoHasta(dias_examenes[i]);
