@@ -12,61 +12,25 @@ client.on('message', message => {
   let mensaje = accents.remove(message.content.toLowerCase());
     
   if (message.author.id === client.user.id) return; //ignorar mensajes propios
-
-  if (message.content.toLowerCase().endsWith('que'))
+    
+  class examen {
+    constructor(nombre, fecha) {
+      nombre: '',
+      fecha: null
+      }
+    };
+  
+  const examenes = [
+    new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00")),
+    new examen('Termodinámica 2ª convocatoria', new Date("2023-06-13:T09:00:00.000+02:00")),
+    new examen('Oscilaciones y ondas 2ª convocatoria', new Date("2023-06-26:T15:00:00.000+02:00")),
+    new examen('Métodos Matemáticos II 2ª convocatoria', new Date("2023-06-27:T15:00:00.000+02:00")),
+    new examen('Mecánica II 2ª convocatoria', new Date("2023-06-29:T15:00:00.000+02:00")),
+  ]
+ 
+  if (mensaje === "!examenes")
   {
-    message.channel.send("so");
-  }
-  if (mensaje === "!examen atmo" || mensaje === "!examen atmosfera" || mensaje === "!examen fisica de la atmosfera" || mensaje === "!examen fisica atmosfera" || mensaje === "!examen fis atm")
-  {
-    let dia_examenes = new Date("2023-05-26T09:00:00.000+02:00");
-    let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que la meteomami nos destroce 🥵⛈️`);
-  }
-  if (mensaje === "!examen mecanica" || mensaje === "!examen mec" || mensaje === "!examen mecanica ii" || mensaje === "!examen mec ii" || mensaje === "!examen mecanica 2" || mensaje === "!examen mec 2" )
-  {
-    let dia_examenes = new Date("2023-06-08T09:00:00.000+02:00");
-    let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para Jacob nos meta un hostión a v = c`);
-  }
-  if (mensaje === "!examen oyo" || mensaje === "!examen ondas" || mensaje === "examen oscilaciones" || mensaje === "!examen oscilaciones y ondas" || mensaje === "!examen owo")
-  {
-    let dia_examenes = new Date("2023-06-05T15:00:00.000+02:00");
-    let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Llago nos meta el tensor de deformaciones a presión por el recto anal.`);
-  }
-  if (mensaje === "!examen metodos" || mensaje === "!examen metodos matematicos" || mensaje === "!examen met" || mensaje === "!examen met mat" || mensaje === "!examen metodos ii" || mensaje === "!examen metodos matematicos ii" || mensaje === "!examen met ii" || mensaje === "!examen met mat ii" || mensaje === "!examen metodos 2" || mensaje === "!examen metodos matematicos 2" || mensaje === "!examen met 2" || mensaje === "!examen met mat 2")
-  {
-    let dia_examenes = new Date("2023-06-01T09:00:00.000+02:00");
-    let tiempo_hasta_examenes = TiempoHasta(dia_examenes);
-
-    var dias = tiempo_hasta_examenes / 86400000;
-    var horas = (dias - Math.floor(dias)) * 24;
-    var minutos = (horas - Math.floor(horas)) * 60;
-    var segundos = (minutos - Math.floor(minutos)) * 60;
-
-    message.reply(`quedan ${Math.floor(dias)} días, ${Math.floor(horas)} horas, ${Math.floor(minutos)} minutos y ${Math.floor(segundos)} segundos para que Martín Martín nos vuele el culo.`);
-  }
-  if (mensaje === "!todo")
-  {
+    let respuesta = '';
     let tiempo_hasta_examenes = [];
     let dias_examenes = [];
     let dias = [];
@@ -74,26 +38,23 @@ client.on('message', message => {
     let minutos = [];
     let segundos = [];
     
-    dias_examenes[0] = new Date("2023-05-26T09:00:00.000+02:00");
-    dias_examenes[1] = new Date("2023-06-01T09:00:00.000+02:00");
-    dias_examenes[2] = new Date("2023-06-05T15:00:00.000+02:00");
-    dias_examenes[3] = new Date("2023-06-08T09:00:00.000+02:00");
-    
-    for (let i = 0; i < 4 ; i++)
+    for (let i = 0; i < examenes.length ; i++)
     { 
-      tiempo_hasta_examenes[i] = TiempoHasta(dias_examenes[i]);
-      dias[i] = tiempo_hasta_examenes[i] / 86400000;
-      horas[i] = (dias[i] - Math.floor(dias[i])) * 24;
-      minutos[i] = (horas[i] - Math.floor(horas[i])) * 60;
-      segundos[i] = (minutos[i] - Math.floor(minutos[i])) * 60;
+      tiempo_hasta_examenes = TiempoHasta(examenes[i].fecha);
+      respuesta = respuesta + ' ' + tiempo_hasta_examenes;
+      //dias[i] = tiempo_hasta_examenes[i] / 86400000;
+      //horas[i] = (dias[i] - Math.floor(dias[i])) * 24;
+      //minutos[i] = (horas[i] - Math.floor(horas[i])) * 60;
+      //segundos[i] = (minutos[i] - Math.floor(minutos[i])) * 60;
     }
     
-    message.reply(`
-    ${Math.floor(dias[0])} D, ${Math.floor(horas[0])} h, ${Math.floor(minutos[0])} min y ${Math.floor(segundos[0])} s -> Física de la Atmósfera. 
-    ${Math.floor(dias[1])} D, ${Math.floor(horas[1])} h, ${Math.floor(minutos[1])} min y ${Math.floor(segundos[1])} s -> Métodos Matemáticos II.
-    ${Math.floor(dias[2])} D, ${Math.floor(horas[2])} h, ${Math.floor(minutos[2])} min y ${Math.floor(segundos[2])} s -> Oscilaciones y Ondas.
-    ${Math.floor(dias[3])} D, ${Math.floor(horas[3])} h, ${Math.floor(minutos[3])} min y ${Math.floor(segundos[3])} s -> Mecánica II.
-    `);
+    //message.reply(`
+    //${Math.floor(dias[0])} D, ${Math.floor(horas[0])} h, ${Math.floor(minutos[0])} min y ${Math.floor(segundos[0])} s -> Física de la Atmósfera. 
+    //${Math.floor(dias[1])} D, ${Math.floor(horas[1])} h, ${Math.floor(minutos[1])} min y ${Math.floor(segundos[1])} s -> Métodos Matemáticos II.
+    //${Math.floor(dias[2])} D, ${Math.floor(horas[2])} h, ${Math.floor(minutos[2])} min y ${Math.floor(segundos[2])} s -> Oscilaciones y Ondas.
+    //${Math.floor(dias[3])} D, ${Math.floor(horas[3])} h, ${Math.floor(minutos[3])} min y ${Math.floor(segundos[3])} s -> Mecánica II.
+    //`);
+    message.reply(respuesta);
   } //Podría hacer todo esto con un struct y sería más fácil pero soy masoca
 });
 
