@@ -14,9 +14,9 @@ client.on('message', message => {
   if (message.author.id === client.user.id) return; //ignorar mensajes propios
     
   class examen {
-    constructor(name, date) {
-      this.nombre = name;
-      this.fecha = date;
+    constructor(nombre, fecha) {
+      this.nombre = nombre;
+      this.fecha = fecha;
       }
     };
   //const prueba = new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00"));
