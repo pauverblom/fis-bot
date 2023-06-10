@@ -40,7 +40,7 @@ client.on('message', message => {
     
     for (let i = 0; i < examenes.length ; i++)
     { 
-      tiempo_hasta_examenes = TiempoHasta(new Date("2023-06-29:T15:00:00.000+02:00")));
+      tiempo_hasta_examenes = TiempoHasta(new Date("2023-06-29:T15:00:00.000+02:00"));
       respuesta = respuesta + ' ' + tiempo_hasta_examenes;
       //dias[i] = tiempo_hasta_examenes[i] / 86400000;
       //horas[i] = (dias[i] - Math.floor(dias[i])) * 24;
