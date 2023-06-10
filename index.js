@@ -15,8 +15,8 @@ client.on('message', message => {
     
   class examen {
     constructor(nombre, fecha) {
-      nombre: '',
-      fecha: null
+      this.nombre = nombre;
+      this.fecha = fecha;
       }
     };
   
