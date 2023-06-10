@@ -25,7 +25,7 @@ client.on('message', message => {
     new examen('Termodinámica 2ª convocatoria', new Date("2023-06-13:T09:00:00.000+02:00")),
     new examen('Oscilaciones y ondas 2ª convocatoria', new Date("2023-06-26:T15:00:00.000+02:00")),
     new examen('Métodos Matemáticos II 2ª convocatoria', new Date("2023-06-27:T15:00:00.000+02:00")),
-    new examen('Mecánica II 2ª convocatoria', new Date("2023-06-29:T15:00:00.000+02:00")),
+    new examen('Mecánica II 2ª convocatoria', new Date("2023-06-29:T15:00:00.000+02:00"))
   ];
  
   if (mensaje === "!examenes")
