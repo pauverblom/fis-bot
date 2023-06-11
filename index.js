@@ -13,35 +13,26 @@ client.on('message', message => {
     
   if (message.author.id === client.user.id) return; //ignorar mensajes propios
     
-  class examen {
-    constructor(nombre, fecha) {
-      this.nombre = nombre;
-      this.fecha = fecha;
-      }
+  var examen = {
+    nombre: '',
+    fecha: new Date()
     };
   //const prueba = new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00"));
   const examenes = [
-    new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00")),
-    new examen('Termodinámica 2ª convocatoria', new Date("2023-06-13:T09:00:00.000+02:00")),
-    new examen('Oscilaciones y ondas 2ª convocatoria', new Date("2023-06-26:T15:00:00.000+02:00")),
-    new examen('Métodos Matemáticos II 2ª convocatoria', new Date("2023-06-27:T15:00:00.000+02:00")),
-    new examen('Mecánica II 2ª convocatoria', new Date("2023-06-29:T15:00:00.000+02:00"))
+    new examen(nombre: 'Física de la atmósfera 2ª convocatoria', fecha: new Date("2023-06-19:T15:00:00.000+02:00")),
+    new examen(nombre:'Termodinámica 2ª convocatoria', fecha: new Date("2023-06-13:T09:00:00.000+02:00")),
+    new examen(nombre:'Oscilaciones y ondas 2ª convocatoria', fecha: new Date("2023-06-26:T15:00:00.000+02:00")),
+    new examen(nombre:'Métodos Matemáticos II 2ª convocatoria', fecha: new Date("2023-06-27:T15:00:00.000+02:00")),
+    new examen(nombre:'Mecánica II 2ª convocatoria', fecha: new Date("2023-06-29:T15:00:00.000+02:00"))
   ];
  
   if (mensaje === "!examenes")
   {
     let respuesta = '';
-    let tiempo_hasta_examenes = [];
-    let dias_examenes = [];
-    let dias = [];
-    let horas = [];
-    let minutos = [];
-    let segundos = [];
-    
     for (let i = 0; i < examenes.length ; i++)
     { 
-      tiempo_hasta_examenes = TiempoHasta(examenes[i].fecha);
-      respuesta = respuesta + ' ' + tiempo_hasta_examenes;
+
+      respuesta = respuesta + ' ' + TiempoHasta(examenes[i].fecha);
       //dias[i] = tiempo_hasta_examenes[i] / 86400000;
       //horas[i] = (dias[i] - Math.floor(dias[i])) * 24;
       //minutos[i] = (horas[i] - Math.floor(horas[i])) * 60;
