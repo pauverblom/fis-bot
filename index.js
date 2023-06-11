@@ -35,7 +35,7 @@ client.on('message', message => {
     { 
 
       respuesta = respuesta + ' ' + TiempoHasta(examenes[i].fecha);
-      //dias[i] = tiempo_hasta_examenes[i] / 86400000;
+      ///dias[i] = tiempo_hasta_examenes[i] / 86400000;
       //horas[i] = (dias[i] - Math.floor(dias[i])) * 24;
       //minutos[i] = (horas[i] - Math.floor(horas[i])) * 60;
       //segundos[i] = (minutos[i] - Math.floor(minutos[i])) * 60;
