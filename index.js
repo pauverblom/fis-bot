@@ -33,9 +33,14 @@ client.on('message', message => {
     let respuesta = '';
     for (let i = 0; i < examenes.length ; i++)
     { 
-
-      respuesta = respuesta + ' ' + TiempoHasta(examenes[i].fecha);
-      ///dias[i] = tiempo_hasta_examenes[i] / 86400000;
+      let totalmilis = TiempoHasta(examenes[i].fecha)
+      let dias = totalmilis / 86400000;
+      let horas = (dias - Math.floor(dias)) * 24;
+      let minutos = (horas - Math.floor(horas[i])) * 60;
+      let segundos = (minutos - Math.floor(minutos[i])) * 60;
+      
+      respuesta = respuesta + '\n' + examenes[i].nombre + ': ' + dias + 'D ' + horas + 'h ' + minutos + 'min ' + segundos 's.'
+      //dias[i] = tiempo_hasta_examenes[i] / 86400000;
       //horas[i] = (dias[i] - Math.floor(dias[i])) * 24;
       //minutos[i] = (horas[i] - Math.floor(horas[i])) * 60;
       //segundos[i] = (minutos[i] - Math.floor(minutos[i])) * 60;
