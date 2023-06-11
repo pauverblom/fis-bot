@@ -13,7 +13,7 @@ client.on('message', message => {
     
   if (message.author.id === client.user.id) return; //ignorar mensajes propios
     
-  var examen {
+  class examen {
     constructor(nombre, fecha) {
     this.nombre = nombre;
     this.fecha = fecha;
