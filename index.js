@@ -13,19 +13,17 @@ client.on('message', message => {
     
   if (message.author.id === client.user.id) return; //ignorar mensajes propios
     
-  class examen {
-    constructor(nombre, fecha) {
-    this.nombre = nombre;
-    this.fecha = fecha;
-    }
+  var examen = {
+     nombre: '',
+     fecha: new Date()
   };
   //const prueba = new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00"));
   const examenes = [
-    new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00")),
-    new examen('Termodinámica 2ª convocatoria', new Date("2023-06-13:T09:00:00.000+02:00")),
-    new examen('Oscilaciones y ondas 2ª convocatoria', new Date("2023-06-26:T15:00:00.000+02:00")),
-    new examen('Métodos Matemáticos II 2ª convocatoria', new Date("2023-06-27:T15:00:00.000+02:00")),
-    new examen('Mecánica II 2ª convocatoria', new Date("2023-06-29:T15:00:00.000+02:00"))
+          {nombre:'Física de la atmósfera 2ª convocatoria', fecha: new Date("2023-06-19:T15:00:00.000+02:00")},
+          {nombre:'Termodinámica 2ª convocatoria', fecha: new Date("2023-06-13:T09:00:00.000+02:00")},
+          {nombre:'Oscilaciones y ondas 2ª convocatoria', fecha: new Date("2023-06-26:T15:00:00.000+02:00")},
+          {nombre:'Métodos Matemáticos II 2ª convocatoria', fecha: new Date("2023-06-27:T15:00:00.000+02:00")},
+          {nombre:'Mecánica II 2ª convocatoria', fecha: new Date("2023-06-29:T15:00:00.000+02:00")}
   ];
  
   if (mensaje === "!examenes")
