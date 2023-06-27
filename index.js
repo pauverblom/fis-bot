@@ -46,6 +46,20 @@ client.on('message', message => {
         }
         message.reply(respuesta);
     }
+    if (mensaje === "!viaje") {
+            let respuesta = '';
+            let totalmilis = TiempoHasta(new Date ("2023-08-26T17:00:00.000+02:00"));
+            let dias = totalmilis / 86400000;
+            let horas = (dias - Math.floor(dias)) * 24;
+            let minutos = (horas - Math.floor(horas)) * 60;
+            let segundos = (minutos - Math.floor(minutos)) * 60;
+
+            let diasf = Math.floor(dias);
+            let horasf = Math.floor(horas);
+            let minutosf = Math.floor(minutos);
+            let segundosf = Math.floor(segundos);
+            respuesta = "Quedan " + '\n' + examenes[i].nombre + ': ' + diasf + 'D ' + horasf + 'h ' + minutosf + 'min ' + segundosf + 's.' + " hasta el TRINIVIAJEEEEEEEEEEEEEEE";
+            message.reply(respuesta);
 });
 
 client.login(process.env.TOKEN);
