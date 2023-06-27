@@ -57,7 +57,7 @@ client.on('message', message => {
             let horasf = Math.floor(horas);
             let minutosf = Math.floor(minutos);
             let segundosf = Math.floor(segundos);
-            respuesta = "Quedan " + '\n' + ': ' + diasf + 'D ' + horasf + 'h ' + minutosf + 'min ' + segundosf + 's.' + " hasta el TRINIVIAJEEEEEEEEEEEEEEE";
+            respuesta = "Quedan " + diasf + 'D ' + horasf + 'h ' + minutosf + 'min ' + segundosf + 's.' + " hasta el TRINIVIAJEEEEEEEEEEEEEEE";
             message.reply(respuesta);
     }
     
