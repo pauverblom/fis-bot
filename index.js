@@ -60,6 +60,7 @@ client.on('message', message => {
             let segundosf = Math.floor(segundos);
             respuesta = "Quedan " + '\n' + examenes[i].nombre + ': ' + diasf + 'D ' + horasf + 'h ' + minutosf + 'min ' + segundosf + 's.' + " hasta el TRINIVIAJEEEEEEEEEEEEEEE";
             message.reply(respuesta);
+    }
 });
 
 client.login(process.env.TOKEN);
