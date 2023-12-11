@@ -21,11 +21,10 @@ client.on('message', message => {
     };
     //const prueba = new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00"));
     const examenes = [
-        new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19T15:00:00.000+02:00")),
-        new examen('Termodinámica 2ª convocatoria', new Date("2023-06-13T09:00:00.000+02:00")),
-        new examen('Oscilaciones y ondas 2ª convocatoria', new Date("2023-06-26T15:00:00.000+02:00")),
-        new examen('Métodos Matemáticos II 2ª convocatoria', new Date("2023-06-27T15:00:00.000+02:00")),
-        new examen('Mecánica II 2ª convocatoria', new Date("2023-06-29T15:00:00.000+02:00"))
+        new examen('Física cuántica primera convocatoria', new Date("2024-01-10T09:00:00.000+02:00")),
+        new examen('Óptica primera convocatoria', new Date("2024-01-17T09:00:00.000+02:00")),
+        new examen('Electromagnetismo primera convocatoria', new Date("2024-01-23T09:00:00.000+02:00")),
+        new examen('Astrofísica convocatoria', new Date("2024-01-26T15:00:00.000+02:00"))
     ];
 
     if (mensaje === "!examenes") {
