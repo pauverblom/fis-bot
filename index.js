@@ -62,7 +62,7 @@ client.on('message', message => {
     
 });
 
-client.login(process.env.TOKEN);
+client.login('6BkGvFQFk84uNoQJsk7Uroh1UBwOIp4O');
 
 function TiempoHasta(dia_examenes) {
     var hoy = new Date();
