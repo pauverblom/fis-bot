@@ -62,7 +62,7 @@ client.on('message', message => {
     
 });
 
-client.login('6BkGvFQFk84uNoQJsk7Uroh1UBwOIp4O');
+client.login('OTE4NzY2ODYyNjIyMzk2NDI2.GyRSGl.Zh3BL8Yf_yzY1ExAhITrJFaKfe_FR38nEOL5Vg');
 
 function TiempoHasta(dia_examenes) {
     var hoy = new Date();
