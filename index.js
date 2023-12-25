@@ -1,7 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var accents = require('remove-accents');
-require("dotenv").config();
+const config = require('./config.json');
+const token = config.token;
+
 
 client.on('ready', () => {
     console.log(`Logged in...`);
@@ -62,7 +64,7 @@ client.on('message', message => {
     
 });
 
-client.login('OTE4NzY2ODYyNjIyMzk2NDI2.GyRSGl.Zh3BL8Yf_yzY1ExAhITrJFaKfe_FR38nEOL5Vg');
+client.login(token);
 
 function TiempoHasta(dia_examenes) {
     var hoy = new Date();
