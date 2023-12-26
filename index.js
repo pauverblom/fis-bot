@@ -18,7 +18,7 @@ client.on('message', message => {
 
     let mensaje = accents.remove(message.content.toLowerCase());
 
-    if (message.author.id === client.user.id) return; //ignorar mensajes propios klomp
+    if (message.author.id === client.user.id) return; //ignorar mensajes propios klomper
 
     class examen {
         constructor(nombre, fecha) {
