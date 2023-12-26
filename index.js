@@ -18,7 +18,7 @@ client.on('message', message => {
 
     let mensaje = accents.remove(message.content.toLowerCase());
 
-    if (message.author.id === client.user.id) return; //ignorar mensajes propios si no va a la cama
+    if (message.author.id === client.user.id) return; //ignorar mensajes propios 
 
     class examen {
         constructor(nombre, fecha) {
