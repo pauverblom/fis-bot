@@ -11,7 +11,7 @@ const client = new Client({
 });
 
 client.on('ready', () => {
-    console.log(`ERRANDONEA DENTROO`);
+    console.log(`ERRANDONEA DENTRO`);
 });
 
 client.on('message', message => {
