@@ -72,6 +72,23 @@ client.on('message', message => {
 });
 
 
+client.on('voiceStateUpdate', (oldState, newState) => {
+	const privatechannel = client.channels.cache.get('1188954856988352553');
+	const user = newState.member.user;
+	// Check if the user was in a voice channel before the update
+	const wasInVoice = !!oldState.channel;
+	// Check if the user is in a voice channel after the update
+	const isInVoice = !!newState.channel;
+	if (!wasInVoice && isInVoice) {
+	// User joined a voice channel
+		privatechannel.send(`${user.tag} joined voice channel ${newState.channel.name}`);
+	// You can perform actions here when a user joins a channel
+	} else if (wasInVoice && !isInVoice) {
+	// User left a voice channel
+		privatechannel.send(`${user.tag} left voice channel ${oldState.channel.name}`);
+	// You can perform actions here when a user leaves a channel
+	}
+});
 
 
 
