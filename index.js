@@ -2,9 +2,6 @@ const {Client, Intents} = require('discord.js');
 var accents = require('remove-accents');
 const config = require('./config.json');
 const token = config.token;
-
-const privatechannel = client.channels.cache.get('1188954856988352553');
-
 const client = new Client({
 	intents:[
 		Intents.FLAGS.GUILDS,
@@ -12,6 +9,9 @@ const client = new Client({
 		Intents.FLAGS.GUILD_VOICE_STATES,
 	],
 });
+
+const privatechannel = client.channels.cache.get('1188954856988352553');
+
 
 client.on('ready', () => {
     console.log(`ERRANDONEA DENTRO`);
