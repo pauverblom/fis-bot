@@ -10,10 +10,8 @@ const client = new Client({
 	],
 });
 
-const privatechannel = client.channels.cache.get('1188954856988352553');
-
-
 client.on('ready', () => {
+	const privatechannel = client.channels.cache.get('1188954856988352553');
     console.log(`ERRANDONEA DENTRO`);
 	privatechannel.send('ERRANDONEA DENTRO');
 });
