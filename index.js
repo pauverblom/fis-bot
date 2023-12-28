@@ -3,15 +3,19 @@ var accents = require('remove-accents');
 const config = require('./config.json');
 const token = config.token;
 
+const privatechannel = client.channels.cache.get('1188954856988352553');
+
 const client = new Client({
 	intents:[
 		Intents.FLAGS.GUILDS,
 		Intents.FLAGS.GUILD_MESSAGES,
+		Intents.FLAGS.GUILD_VOICE_STATES,
 	],
 });
 
 client.on('ready', () => {
     console.log(`ERRANDONEA DENTRO`);
+	privatechannel.send('ERRANDONEA DENTRO');
 });
 
 client.on('message', message => {
@@ -68,6 +72,11 @@ client.on('message', message => {
     }
     
 });
+
+
+
+
+
 
 client.login(token);
 
