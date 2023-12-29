@@ -12,8 +12,7 @@ const client = new Client({
 
 client.on('ready', () => {
 	const privatechannel = client.channels.cache.get('1188954856988352553');
-    console.log(`ERRANDONEA DENTRO`);
-	privatechannel.send('ERRANDONEA DENTRO');
+	privatechannel.send('FIS-BOT UPDATED');
 });
 
 client.on('message', message => {
