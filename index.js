@@ -27,7 +27,7 @@ client.on('message', message => {
             this.fecha = fecha;
         }
     };
-    //const prueba = new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00"));
+    //const prueba = new examen('Física de la atmósfera 2ª convocatoria', new Date("2023-06-19:T15:00:00.000+02:00"));;
     const examenes = [
         new examen('Física cuántica', new Date("2024-01-10T09:00:00.000+02:00")),
         new examen('Óptica', new Date("2024-01-17T09:00:00.000+02:00")),
