@@ -1,7 +1,6 @@
 const {Client, Intents} = require('discord.js');
 var accents = require('remove-accents');
-const config = require('./config.json');
-const token = config.token;
+const token = process.env.DISCORD_TOKEN;
 const client = new Client({
 	intents:[
 		Intents.FLAGS.GUILDS,
